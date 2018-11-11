@@ -21,7 +21,6 @@ function status(statusText) {
 }
 
 function showMetadata(metadataJSON) {
-  #read basic information from metadata
   document.getElementById('vocabularySize').textContent =
       metadataJSON['vocabulary_size'];
   document.getElementById('maxLen').textContent =
