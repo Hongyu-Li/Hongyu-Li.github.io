@@ -1,20 +1,24 @@
 
 <!doctype html>
+<head>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-teal.min.css" />
+</head>
 
 <body>
   <style>
     #textfield {
-      font-size: 1200%;
-      width: 1600%;
-      height: 2000px;
+      font-size: 120%;
+      width: 60%;
+      height: 200px;
     }
   </style>
   <h1>  
-    Text Classification for Project Gutenberg
+    Text Classification 
   </h1>
   <hr>
   <div class="create-model">
-    <button id="load-model" style="display:none">Load model</button>
+    <button id="load-simple-model" style="display:none">Load simple model</button>
+    <button id="load-LSTM-model" style="display:none">Load LSTM model</button>
   </div>
   <div>
     <div>
