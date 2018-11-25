@@ -8,11 +8,11 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'Happy families are all alike; every unhappy family is unhappy in its own way.',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'      
+      'There was no possibility of taking a walk that day. '      
 };
 
 function status(statusText) {
