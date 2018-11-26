@@ -6,4 +6,4 @@ In this assignment, I chose three of my favorite books (`Pride and Prejudice, An
 
 A simple model(Embedding+Dense) and LSTM were trained. The results show that our advanced model(LSTM) does not overfit too badly as the simple model. And compared with the simple model, **it increases the test accuracy by 6% and reduces the test loss by 10%**. 
 
-[Clike and Try me!](https://hongyu-li.github.io/hw4/)
+[Click and Try me!](https://hongyu-li.github.io/hw4/)
