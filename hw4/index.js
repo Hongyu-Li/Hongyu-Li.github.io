@@ -12,7 +12,7 @@ const examples = {
   'example2':
       'Happy families are all alike; every unhappy family is unhappy in its own way.',
   'example3':
-      'There was no possibility of taking a walk that day. '      
+      'Folds of scarlet drapery shut in my view to the right hand; to the left were the clear panes of glass, protecting, but not separating me from the drear November day.'      
 };
 
 function status(statusText) {
