@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<body>
+  <head>
+    <script type='text/x-javascript'>
+      function previewFile(){
+             var preview = document.querySelector('img'); //selects the query named img
+             var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+             var reader  = new FileReader();
+
+             reader.onloadend = function (e) {
+                 var image = new Image();
+                 image.onload=function(){
+                     document.getElementById('imgH').textContent = image.height;
+                     document.getElementById('imgW').textContent = image.width;
+                 };
+                 image.src = reader.result;
+                 preview.src = reader.result;
+             }
+
+             if (file) {
+                 reader.readAsDataURL(file); //reads the data as a URL
+             } else {
+                 preview.src = "";
+             }
+        }
+      previewFile();
+    </script>
+  </head>
+
+  <h1>
+    Image Colorization
+  </h1>
+  <hr>
+  <div class="create-model">
+    <button id="load-model" style="display:inline">Load model</button>
+  </div>
+  <div>
+    <div>
+      <span>Height: </span>
+      <span id="imgH"></span>
+    </div>
+    <div>
+      <span>Width: </span>
+      <span id="imgW"></span>
+    </div>
+  </div>
+  <hr>
+  <div class='upload-files'>
+    <span>Please upload image in jpg/jpeg/png format:</span>
+    <input type="file" onchange="previewFile()"><br>
+    <img src="" height="200" alt="Image preview...">
+  </div>
+  <hr>
+  <div>
+    <span id="status">Standing by.</span>
+  </div>
+  
+  <script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js'></script>
+  <script src='index.js'></script>
+</body>
