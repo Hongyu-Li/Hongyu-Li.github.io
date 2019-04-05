@@ -63,9 +63,9 @@ class Colorize {
   }
 
   predict(img) {
-    const inputImage = img
-    inputImage.width = 256
-    inputImage.height = 256
+    const inputImage = img;
+    inputImage.width = 256;
+    inputImage.height = 256;
 
     status('Running inference');
     const beginMs = performance.now();
