@@ -66,10 +66,12 @@ class Colorize {
     const inputImage = img;
     inputImage.width = 256;
     inputImage.height = 256;
+    const predictOut = this.model.predict(inputImage);
+    console.log(predictOut);
 
     status('Running inference');
-    const beginMs = performance.now();
-    var predictOut = this.model.predict(inputImage);
+    //const beginMs = performance.now();
+
     //predictOut.dispose();
     //const endMs = performance.now();
 
@@ -83,7 +85,6 @@ async function setup() {
     const button = document.getElementById('load-model');
     button.addEventListener('click', async () => {
       const predictor = await new Colorize().init(HOSTED_URLS);
-      prepUI(x => predictor.predict(x));
     });
     button.style.display = 'inline-block';
   }
