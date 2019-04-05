@@ -8,7 +8,13 @@
              var file    = document.querySelector('input[type=file]').files[0]; //sames as here
              var reader  = new FileReader();
 
-             reader.onloadend = function () {
+             reader.onloadend = function (e) {
+                 var image = new Image();
+                 image.onload=function(){
+                     document.getElementById('imgH').textContent = image.height;
+                     document.getElementById('imgW').textContent = image.width;
+                 };
+                 image.src = reader.result;
                  preview.src = reader.result;
              }
 
