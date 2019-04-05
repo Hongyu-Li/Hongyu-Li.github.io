@@ -53,6 +53,7 @@ async function loadHostedPretrainedModel(url) {
   }
 }
 
+
 class Colorize {
 
   async init(urls) {
@@ -62,20 +63,17 @@ class Colorize {
   }
 
   predict(img) {
-    //const inputImage = img
-    //const inputBuffer = tf.buffer([25], 'float32');
-    //const input = inputBuffer.toTensor();
-    //console.log(input);
+    const inputImage = img
+    inputImage.width = 256
+    inputImage.height = 256
 
     status('Running inference');
-    //const beginMs = performance.now();
-    //const predictOut = this.model.predict(input);
-    //console.log(predictOut.dataSync());
-    //const score = predictOut.dataSync();//[0];
+    const beginMs = performance.now();
+    var predictOut = this.model.predict(inputImage);
     //predictOut.dispose();
     //const endMs = performance.now();
 
-    //return ;
+    return predictOut;
   }
 };
 
@@ -84,7 +82,7 @@ async function setup() {
     status('Model available: ' + HOSTED_URLS.model);
     const button = document.getElementById('load-model');
     button.addEventListener('click', async () => {
-      const predictor = await new Classifier().init(HOSTED_URLS);
+      const predictor = await new Colorize().init(HOSTED_URLS);
       prepUI(x => predictor.predict(x));
     });
     button.style.display = 'inline-block';
