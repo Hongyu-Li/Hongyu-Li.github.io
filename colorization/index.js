@@ -51,4 +51,46 @@ async function loadHostedPretrainedModel(url) {
     console.error(err);
     status('Loading pretrained model failed.');
   }
+}
+
+class Colorize {
+
+  async init(urls) {
+    this.urls = urls;
+    this.model = await loadHostedPretrainedModel(urls.model);
+    return this;
+  }
+
+  predict(img) {
+    //const inputImage = img
+    //const inputBuffer = tf.buffer([25], 'float32');
+    //const input = inputBuffer.toTensor();
+    //console.log(input);
+
+    status('Running inference');
+    //const beginMs = performance.now();
+    //const predictOut = this.model.predict(input);
+    //console.log(predictOut.dataSync());
+    //const score = predictOut.dataSync();//[0];
+    //predictOut.dispose();
+    //const endMs = performance.now();
+
+    //return ;
+  }
 };
+
+async function setup() {
+  if (await urlExists(HOSTED_URLS.model)) {
+    status('Model available: ' + HOSTED_URLS.model);
+    const button = document.getElementById('load-model');
+    button.addEventListener('click', async () => {
+      const predictor = await new Classifier().init(HOSTED_URLS);
+      prepUI(x => predictor.predict(x));
+    });
+    button.style.display = 'inline-block';
+  }
+
+  status('Standing by.');
+}
+
+setup();
