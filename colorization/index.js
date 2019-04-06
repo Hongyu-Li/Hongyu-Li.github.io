@@ -1,6 +1,6 @@
 
 const HOSTED_URLS = {
-  model:'model_js/model.json'
+  model:'../hw4/model_js/model.json'
 };
 
 function status(statusText) {
