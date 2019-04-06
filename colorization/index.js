@@ -1,7 +1,3 @@
-
-import * as tf from '@tensorflow/tfjs';
-import {loadGraphModel} from '@tensorflow/tfjs-converter';
-
 const HOSTED_URLS = {
   model:'model_js/model.json'
 };
