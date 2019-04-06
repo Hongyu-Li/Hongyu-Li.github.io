@@ -1,4 +1,7 @@
 
+import * as tf from '@tensorflow/tfjs';
+import {loadGraphModel} from '@tensorflow/tfjs-converter';
+
 const HOSTED_URLS = {
   model:'model_js/model.json'
 };
@@ -43,7 +46,7 @@ async function urlExists(url) {
 async function loadHostedPretrainedModel(url) {
   status('Loading pretrained model from ' + url);
   try {
-    const model = await tf.loadLayersModel(url);
+    const model = await loadGraphModel(url);
     status('Done loading pretrained model.');
     disableLoadModelButtons();
     return model;
