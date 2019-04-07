@@ -49,7 +49,7 @@ async function loadHostedPretrainedModel(url) {
   } catch (err) {
     //console.error(err);
     //status('Loading pretrained model failed.');
-    status(console.error(err));
+    status(err.message);
   }
 }
 
