@@ -47,8 +47,9 @@ async function loadHostedPretrainedModel(url) {
     disableLoadModelButtons();
     return model;
   } catch (err) {
-    console.error(err);
-    status('Loading pretrained model failed.');
+    //console.error(err);
+    //status('Loading pretrained model failed.');
+    status(console.error(err));
   }
 }
 
