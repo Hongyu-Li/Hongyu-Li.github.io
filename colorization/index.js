@@ -1,5 +1,5 @@
 const HOSTED_URLS = {
-  model:'model_js/model.json'
+  model:'"http://10.0.0.14:81/tfjs-models/VGG16/model.json"'
 };
 
 function status(statusText) {
