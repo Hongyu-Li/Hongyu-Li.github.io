@@ -1,5 +1,5 @@
 const HOSTED_URLS = {
-  model:"https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json"
+  model:"https://github.com/evenchange4/nextjs-tfjs-cnn/blob/master/static/model-tfjs/model.json"
 };
 
 function status(statusText) {
