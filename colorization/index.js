@@ -1,5 +1,5 @@
 const HOSTED_URLS = {
-  model:"https://github.com/evenchange4/nextjs-tfjs-cnn/blob/master/static/model-tfjs/model.json"
+  model:"model-tfjs/model.json"
 };
 
 function status(statusText) {
